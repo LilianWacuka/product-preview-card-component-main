@@ -1,14 +1,14 @@
-@import url(("https://fonts.google.com/specimen/Montserrat"));
-@import url(("https://fonts.google.com/specimen/Fraunces"));
+/* @import url(("https://fonts.google.com/specimen/Montserrat"));
+@import url(("https://fonts.google.com/specimen/Fraunces")); */
 :root{
---Dark cyan: hsl(158, 36%, 37%);
---Cream: hsl(30, 38%, 92%);
---Very dark blue: hsl(212, 21%, 14%);
---Dark grayish blue: hsl(228, 12%, 48%);
---White: hsl(0, 0%, 100%);
---Font size (paragraph): 14px;
---font-weight-medium:500, 700;
---font-weight-bold:700;
+    --Darkcyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Verydarkblue: hsl(212, 21%, 14%);
+    --Darkgrayishblue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+    --Font-size: 14px;
+    --font-weight-medium:500, 700;
+    --font-weight-bold:700;
 }
 body{
     background-color: hsl(30, 38%, 92%);
@@ -17,29 +17,50 @@ body{
     font-weight: 500;
     gap: 4rem;
     flex-direction: column;
+    display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     color: var(--Dark grayish blue);
+    padding: 20px;
+    
 }
 .perfume{
     background-color:var(--White);
     display: flex;
     text-align: center;
-    max-width: 350px;
-    flex-direction: column;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     font-size: 14px;
+    flex-direction: row;
+    justify-content: center;
+    box-sizing: border-box;
+
 }
-.perfume-image{
+/* .Perfume-image{
     width: 100%;
-    height: auto;
-}
+    
+} */
 .Perfume-details{
     padding: 20px;
     font-size: 14px;
+    width: 300px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.picture{
+width: 300px;
+height: 500px;
+background-image: url(images/image-product-mobile.jpg);  
+}
+
+img{
+    display: block;
+    width: 300px;
+    height: 500px;
 }
 .item{
     letter-spacing: 5px;
@@ -51,7 +72,7 @@ body{
   
 .item-title{
     font-family: "Fraunces",serif;
-   color: var(--Very dark blue);
+    color: var(--Very dark blue);
     font-weight: 700;
     font-size: 24px;
 }
@@ -83,11 +104,12 @@ button{
     display: flex;
     align-items: center;
     gap: 11.61px;
-    background-color:hsl(158, 36%, 37%) ;
-    color: hsl(0, 0%, 100%);
+    background-color:hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%) ;
     padding: 15px 92px;
     border-radius: 8px;
     border: 0;
+    width: 100%;
 }
 button:hover{
     background-color:hsl(158, 36%, 37%);
@@ -98,10 +120,11 @@ button:focus{
     outline: none;
 }
 button>span{
-    max-width: max-content;
     font-family: 'Montserrat', serif;
     font-size: 1.4rem;
     font-weight: bold;
+    margin-right: 10px;
+    gap: 10px;
 }
 .attribution{
     display: none;
